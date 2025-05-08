@@ -1,0 +1,146 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Met HBD Kes</title>
+    <link rel="shortcut icon" href="finalOAT-01.png" type="image/x-icon">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <section class="parallax" name="home" id="home">
+        <h2 id="text">
+          <span>Selamat Ulang Tahun</span
+          ><br />Kesa <br>
+        </h2>
+        <a href="#about" class="btn" >Yang ke 18</a>
+  
+        <div class="wave" id="wave1" style="--i: 1"></div>
+        <div class="wave" id="wave2" style="--i: 2"></div>
+        <div class="wave" id="wave3" style="--i: 3"></div>
+        <div class="wave" id="wave4" style="--i: 4"></div>
+      </section>
+      <section class="sec" id="about">
+
+        <div class="audio-player" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+            <h3>Lagu Ulang Tahun Spesial Untukmu</h3>
+            <audio id="birthdaySong" autoplay loop style="display: none;">
+                <source src="Hindia - Secukupnya (Official Lyric & Commentary Video).mp3" type="audio/mpeg">
+                Browser Anda tidak mendukung elemen audio.
+            </audio>
+            <button id="toggleMusic" class="music-control">Jeda Musik</button>
+        </div>
+        <center>
+        <h2 data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000">
+          Khaisya Maliha Iwan
+        </h2>
+      </center><br>
+        <p data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+          Selamat ulang tahun yang ke 17 kes,walau pun gw telat buat ngasih ini.gw tau akhir-akhir ini lu sering banyak masalah,project,deadline tugas
+          dll. Gw tau mungkin lu cape, pengen nyerah dan berhenti, tapi gw pengen ngingetin lu buat jangan menyerah ya, karena gw tau lu kuat.
+          ketika lu tertimpa masalah, gpp kok buat ngelu dan lain sebagainya. asalkan lu jangan nyerah. Jangan pernah berhenti buat ngeraih mimpi lu itu,
+          jangan pernah menyerah untuk masuk ke kampus ITB favorit lu, jika nanti lu ngerasa usaha lu menghianati lu.
+          satu hal yang lu perlu tau, lu ngak sendiri.
+          <br /><br />Ada kita disini, ada anak-anak OAT dan Genta yang akan selalu support lu dan akan selalu membantu lu,
+          sebisa mungkin. Sekali lagi gw ucapkan selamat ulang tahun yang ke 17 kes, semoga lu selalu diberi kemudahan dalam hidup, semoga lu diberi kekuatan
+          dan semoga lu selalu kuat menjalani dan meneruskan hari-hari lu. Semoga lu selalu diberi kemudahan dalam hidup, semoga lu diberi kekuatan
+        </p>
+      </section>    
+      <section class="gallery" id="galeri">
+        <h2 class="title-gallery">Galeri Kesa</h2>
+        <div class="gallery-container" data-aos="fade-up">
+          <div class="gallery-item">
+            <img src="img/IMG_2256.JPG" alt="Foto 1" class="gallery-image" />
+          </div>
+          <div class="gallery-item">
+            <img src="img/IMG_7164.JPG" alt="Foto 2" class="gallery-image" />
+          </div>       
+          <div class="gallery-item">
+            <img src="img/IMG_7182.JPG" alt="Foto 3" class="gallery-image" />
+          </div>
+          <div class="gallery-item">
+            <img src="img/IMG-20220616-WA0066.jpg" alt="Foto 1" class="gallery-image" />
+          </div>         
+          <div class="gallery-item">
+            <img src="img/IMG-20220619-WA0193.jpg" alt="Foto 3" class="gallery-image" />
+          </div>    
+          <div class="gallery-item">
+            <img src="img/IMG-20230129-WA0031.jpg" alt="Foto 3" class="gallery-image" />
+          </div>            
+          <div class="gallery-item">
+            <img src="img/IMG-20231031-WA0095.jpg" alt="Foto 3" class="gallery-image" />
+          </div>  
+          <div class="gallery-item">            
+           </div>
+          <div class="gallery-item">
+            <img src="img/IMG_20221215_110954.jpg" alt="Foto 3" class="gallery-image" />
+          </div>  
+          <div class="gallery-item">
+            <img src="img/IMG_20230315_123434.jpg" alt="Foto 3" class="gallery-image" />
+          </div>  
+          <div class="gallery-item">
+            <img src="img/IMG_20240106_145531.jpg" alt="Foto 3" class="gallery-image" />
+          </div>  
+          
+
+           <footer>
+            Dibuat oleh <b>Kidding</b> untuk hari istimewamu
+        </footer>
+</body>
+<script>
+    
+          let wave1 = document.getElementById("wave1");
+          let wave2 = document.getElementById("wave2");
+          let wave3 = document.getElementById("wave3");
+          let wave4 = document.getElementById("wave4");
+    
+          window.addEventListener("scroll", function () {
+            let value = window.scrollY;
+    
+            wave1.style.backgroundPositionX = 400 + value * 4 + "px";
+            wave2.style.backgroundPositionX = 300 + value * -4 + "px";
+            wave3.style.backgroundPositionX = 200 + value * 2 + "px";
+            wave4.style.backgroundPositionX = 100 + value * -2 + "px";
+          });
+        </script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init();
+        </script>
+            <script>            
+                
+                // Menghilangkan status muted pada audio setelah halaman dimuat
+                document.addEventListener('DOMContentLoaded', function() {
+                    setTimeout(function() {
+                        const audioElement = document.getElementById('birthdaySong');
+                        audioElement.play().catch(function(error) {
+                            console.log("Autoplay terhalang:", error);
+                            // Buat tampilan yang menunjukkan pengguna perlu berinteraksi
+                            document.querySelector('.audio-player h3').textContent = 
+                                "Klik di mana saja untuk memutar musik";
+                            
+                            // Tambahkan event untuk memulai musik saat pengguna berinteraksi
+                            document.addEventListener('click', function startAudio() {
+                                audioElement.play();
+                                document.querySelector('.audio-player h3').textContent = 
+                                    "Lagu Ulang Tahun Spesial Untukmu";
+                                document.removeEventListener('click', startAudio);
+                            }, {once: true});
+                        });
+                    }, 1000);
+                    
+                    // Toggle musik
+                    const toggleButton = document.getElementById('toggleMusic');
+                    toggleButton.addEventListener('click', function() {
+                        const audioElement = document.getElementById('birthdaySong');
+                        if (audioElement.paused) {
+                            audioElement.play();
+                            toggleButton.textContent = 'Jeda Musik';
+                        } else {
+                            audioElement.pause();
+                            toggleButton.textContent = 'Putar Musik';
+                        }
+                    });
+                });
+            </script>
+</html>
